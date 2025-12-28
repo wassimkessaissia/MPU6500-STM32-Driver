@@ -241,7 +241,7 @@ Contributions are welcome! Feel free to:
 - Suggest features
 - Submit pull requests
 
-## 👨 Author
+##  Author
 
 **Wassim Kessaissia**
 - GitHub: [@wassimkessaissia](https://github.com/wassimkessaissia)
