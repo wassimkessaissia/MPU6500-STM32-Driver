@@ -2,25 +2,25 @@
 
 A lightweight, easy-to-use I2C driver for MPU6500 and MPU6050 IMU sensors on STM32 microcontrollers.
 
-## 📋 Features
+##  Features
 
-- ✅ Compatible with both **MPU6500** and **MPU6050**
-- ✅ I2C communication using STM32 HAL
-- ✅ Automatic sensor detection
-- ✅ Built-in calibration routine (1000 samples)
-- ✅ Read accelerometer and gyroscope in single transaction
-- ✅ Offset compensation for accurate measurements
-- ✅ Clean, documented code
-- ✅ Example usage included
+-  Compatible with both **MPU6500** and **MPU6050**
+-  I2C communication using STM32 HAL
+-  Automatic sensor detection
+-  Built-in calibration routine (1000 samples)
+-  Read accelerometer and gyroscope in single transaction
+-  Offset compensation for accurate measurements
+-  Clean, documented code
+-  Example usage included
 
-## 🔧 Hardware Requirements
+##  Hardware Requirements
 
 - **STM32 microcontroller** (tested on STM32F401RE)
 - **MPU6500** or **MPU6050** sensor module
 - I2C connection (SDA, SCL)
 - UART (for printf debug output)
 
-## 📐 Wiring
+##  Wiring
 
 ```
 STM32           MPU6500/MPU6050
@@ -33,7 +33,7 @@ GND         →   GND
 
 **Note:** Add 4.7kΩ pull-up resistors on SDA and SCL lines if not already present on your module.
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### 1. Add Files to Your Project
 
@@ -89,7 +89,7 @@ int main(void) {
 }
 ```
 
-## 📚 API Reference
+
 
 ### Initialization Functions
 
@@ -148,7 +148,7 @@ MPU6500_Calibrate();
 ```
 **⚠️ Important:** Sensor must be completely still during calibration!
 
-## 📊 Data Structure
+##  Data Structure
 
 ```c
 typedef struct {
@@ -161,7 +161,7 @@ typedef struct {
 } MPU6500_Data;
 ```
 
-## 🔢 Understanding the Values
+##  Understanding the Values
 
 ### Accelerometer (±2g range)
 - **Range:** ±32768
@@ -179,7 +179,7 @@ typedef struct {
   - `131` = Rotating at 1°/s
   - `13100` = Rotating at 100°/s
 
-## 🎯 Example Output
+##  Example Output
 
 ### After Calibration
 ```
@@ -206,11 +206,10 @@ ACC:     12     -5  16375  GYR:      4     -2      0
 
 Values near 0 indicate sensor is calibrated and still!
 
-## 🐛 Troubleshooting
+##  Troubleshooting
 
 ### "No I2C device found"
 - Check wiring (SDA, SCL, VCC, GND)
-- Verify pull-up resistors (4.7kΩ) on SDA and SCL
 - Check I2C speed (100 kHz recommended)
 - Try scanning with different address: `0x69` (if AD0 pin is HIGH)
 
@@ -229,30 +228,30 @@ Values near 0 indicate sensor is calibrated and still!
 - Values may fluctuate ±50 even when still
 - Use filtering or averaging for smoother data
 
-## 📖 Additional Resources
+##  Additional Resources
 
 - [MPU6050 Datasheet](https://invensense.tdk.com/wp-content/uploads/2015/02/MPU-6000-Datasheet1.pdf)
 - [MPU6500 Datasheet](https://invensense.tdk.com/wp-content/uploads/2015/02/MPU-6500-Datasheet2.pdf)
 - [STM32 HAL I2C Documentation](https://www.st.com/resource/en/user_manual/um1725-description-of-stm32f4-hal-and-lowlayer-drivers-stmicroelectronics.pdf)
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions are welcome! Feel free to:
 - Report bugs
 - Suggest features
 - Submit pull requests
 
-## 👨‍💻 Author
+## 👨 Author
 
 **Wassim Kessaissia**
 - GitHub: [@wassimkessaissia](https://github.com/wassimkessaissia)
 - Project Link: [MPU6500-STM32-Driver](https://github.com/wassimkessaissia/MPU6500-STM32-Driver)
 
-## 📝 License
+##  License
 
 This project is open source and available under the MIT License.
 
-## ⭐ Acknowledgments
+##  Acknowledgments
 
 - Built learning embedded systems from scratch
 - Developed using STM32 HAL library
