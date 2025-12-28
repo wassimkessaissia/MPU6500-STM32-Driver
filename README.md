@@ -25,8 +25,8 @@ A lightweight, easy-to-use I2C driver for MPU6500 and MPU6050 IMU sensors on STM
 ```
 STM32           MPU6500/MPU6050
 ─────           ───────────────
-PB7 (SDA)   →   SDA
-PB6 (SCL)   →   SCL
+PB9 (SDA)   →   SDA
+PB8 (SCL)   →   SCL
 3.3V        →   VCC
 GND         →   GND
 ```
